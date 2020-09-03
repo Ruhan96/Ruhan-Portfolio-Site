@@ -1,0 +1,814 @@
+            /*=================================
+               ======== COMMON AREA ========  
+            =================================*/
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+
+}
+
+body {
+    font-family: 'Titillium Web', sans-serif;
+    line-height: 1.3;
+
+}
+
+ul li {
+    list-style: none;
+    cursor: pointer;
+
+}
+
+h1 {
+    font-size: 4.1rem;
+    color: #fff;
+    font-weight: 600;
+
+}
+
+
+
+            /*=================================
+               ==== REUSABLE COMPONENTS ====  
+            =================================*/
+
+
+
+
+.row {
+    max-width: 114rem;
+    margin: 0 auto;
+
+}
+
+h2 {
+    font-size: 3.9rem;
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: .3rem;
+    padding-bottom: 1rem;
+
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 7rem;
+    margin: 0 auto;
+    padding: .5rem 0 0 0;
+
+}
+
+h3 {
+    font-size: 1.7rem;
+    color: #27283d;
+    text-transform: uppercase;
+
+
+}
+
+h4 {
+    padding: 2rem 0 2.5rem 0;
+    font-size: 1.6rem;
+    font-weight: normal;
+    text-transform: uppercase;
+
+}
+
+.little-description {
+    font-size: 1.8rem;
+    color: #fff;
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+    padding: .4rem 0 8rem 0;
+
+}
+
+.btn:link,
+.btn:visited,
+.btn {
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1rem 3rem;
+    border-bottom: 0.3rem solid black;
+    display: inline-block;
+    border-radius: 0.4rem;
+    margin-top: 2rem;
+
+}
+
+.mobile-menu span {
+    color: #fff;
+    float: right;
+    margin-top: 1.5rem;
+    font-size: 4rem;
+    font-weight: bold;
+    display: none;
+    line-height: 1;
+
+}
+
+.mobile-menu span:hover {
+    cursor: pointer;
+
+}
+
+.overlay {
+    width: 0;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    overflow-x: hidden;
+    transition: 0.4s;
+
+}
+
+.overlay-content {
+    width: 100%;
+    position: relative;
+    top: 15%;
+    text-align: center;
+
+}
+
+.close-btn {
+    color: #fff;
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    font-size: 7rem;
+    text-decoration: none;
+    line-height: 1;
+    transition: 0.3s;
+}
+
+.overlay-content a {
+    display: block;
+    color: #999;
+    font-size: 3.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    line-height: 2;
+    transition: 0.3s
+}
+
+.overlay-content a:hover {
+    color: #fff;
+
+}
+
+
+
+            /*=================================
+               ======== HEADER AREA ========  
+            =================================*/
+
+
+
+
+header {
+    background: linear-gradient(rgba(135, 80, 156, 0.9), rgba(135, 80, 156, 0.9)), url(Image/bg1.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 85vh;
+    position: relative;
+
+
+}
+
+.logo {
+    height: 5rem;
+    width: auto;
+    margin: 1.5rem 0;
+    float: left;
+
+}
+
+.main-nav {
+    float: right;
+    margin-top: 2rem;
+
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-left: 1.5rem;
+    border-radius: 0.4rem;
+
+}
+
+.main-nav li:first-child {
+    margin-left: 0;
+    background-color: #643a79;
+
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: rgba(100, 58, 121, 0);
+    padding: 1rem 1rem;
+    display: inline-block;
+    transition: 0.3s;
+    font-size: 1.4rem;
+
+}
+
+.main-nav li:hover a:link,
+.main-nav li:hover a:visited {
+    background-color: rgba(100, 58, 121, 1);
+    border-radius: 0.4rem;
+
+}
+
+.sticky {
+    position: fixed;
+    left: 0;
+    right: 0;
+    background-color: rgba(135, 80, 156, 0.8);
+    z-index: 1;
+    box-shadow: inset 0 0px 5px 1px rgba(255, 255, 255, 0.9);
+
+}
+
+.hero-text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 90%;
+
+}
+
+.btn-hero:link,
+.btn-hero:visited {
+    background: rgba(237, 115, 60, 0.9);
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1rem 3rem;
+    border-bottom: 0.3rem solid #c86a40;
+    display: inline-block;
+    border-radius: 0.4rem;
+    font-size: 1.5rem;
+    transition: 0.3s;
+
+}
+
+.btn-hero:hover {
+    background: #c85826;
+    border-bottom: 0.3rem solid #c86a40;
+
+}
+
+
+
+            /*=================================
+               ======= SERVICES AREA =======  
+            =================================*/
+
+
+
+
+.services-section {
+    padding: 8rem 0;
+    background: linear-gradient(rgba(23, 194, 164, 0.9), rgba(23, 194, 164, 0.9)), url(Image/bg2.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+
+}
+
+.col {
+    text-align: center;
+
+}
+
+h2::after {
+    border-bottom: .3rem solid #14a58c;
+
+}
+
+.services-h {
+    font-size: 1.8rem;
+    color: #fff;
+    text-transform: uppercase;
+
+}
+
+.services-p {
+    font-size: 1.6rem;
+    color: #fff;
+    width: 70%;
+    margin: 0 auto;
+
+}
+
+.services-icon {
+    height: 16rem;
+    padding-bottom: 3.8rem;
+
+}
+
+
+
+            /*=================================
+                ======== TEAM AREA ========  
+            =================================*/
+
+
+
+
+.team-section {
+    padding: 8rem 0;
+    background: linear-gradient(rgba(223, 235, 245, 0.83), rgba(223, 235, 245, 0.83)), url(Image/bg3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 105vh;
+
+}
+
+.team-and-skill {
+    color: #3c4761;
+
+}
+
+.team-and-skill::after {
+    border-bottom: .3rem solid #9baad4;
+
+}
+
+.team-section p {
+    color: #3c4761;
+
+}
+
+.team-member {
+    width: 65%;
+    padding-bottom: 2rem;
+
+}
+
+.role {
+    font-size: 1.3rem;
+    color: #30bae7;
+
+}
+
+.team-p {
+    padding-top: .8rem;
+    font-size: 1.4rem;
+    width: 70%;
+    margin: 0 auto;
+
+}
+
+.social-icon {
+    margin-top: 1.5rem;
+
+}
+
+.social-icon ul li {
+    display: inline-block;
+    margin: 0 .5rem;
+    font-size: 1.5rem;
+    background-color: #889DAB;
+    padding: .5rem .8rem;
+    border-radius: 50%;
+    transition: .3s;
+
+}
+
+.social-icon ul li:first-child {
+    padding: .5rem 1.2rem;
+
+}
+
+.social-icon ul li a {
+    font-size: 2rem;
+    color: #ffffff;
+
+}
+
+.social-icon ul li:hover {
+    background-color: #3c4761;
+    color: #fff;
+
+}
+
+
+
+            /*=================================
+                ======= SKILL AREA ======= 
+            =================================*/
+
+
+
+
+.skill-area {
+    padding: 8rem 0;
+    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(Image/bg4.jpg);
+    height: 100vh;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+.skill-area .team-and-skill::after {
+    border-bottom: .3rem solid #dfe8ed;
+
+}
+
+.skill-area p {
+    color: #3c4761;
+
+}
+
+
+
+    /* === ANIMATED RADIAL PROGRESS BARS AREA === */
+
+
+
+
+svg.radial-progress circle {
+    stroke-width: 7;
+
+}
+
+svg.radial-progress text {
+    fill: #3c4761;
+    font-size: 1.6rem;
+    font-weight: bold;
+
+}
+
+svg.web-design circle {
+    stroke: #30bae7;
+
+}
+
+svg.html-css circle {
+    stroke: #d74680;
+
+}
+
+svg.graphic-design circle {
+    stroke: #15c7a8;
+
+}
+
+svg.ui-ux circle {
+    stroke: #eb7d4b;
+
+}
+
+
+
+            /*=================================
+               ======= PORTFOLIO AREA ======= 
+            =================================*/
+
+
+
+
+.portfolio-section {
+    padding: 8rem 0;
+    background: linear-gradient(rgba(255, 221, 153, 0.9), rgba(255, 221, 153, 0.9)), url(Image/bg5.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+    height: 160vh;
+
+}
+
+.portfolio-section h2 {
+    color: #393939;
+
+}
+
+.portfolio-section h2::after {
+    border-bottom: .3rem solid #e5c37f;
+
+}
+
+.portfolio-section p {
+    color: #393939;
+    padding-bottom: 4rem;
+
+}
+
+.portfolio-filter {
+    padding-bottom: 5rem;
+
+}
+
+.portfolio-filter button {
+    display: inline-block;
+    padding: .4rem 1rem;
+    margin: 0 .5rem;
+    background-color: #ebc985;
+    border: 0;
+    outline: 0;
+    border-radius: .4rem;
+    font-size: 1.8rem;
+    color: #393939;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .4s;
+
+}
+
+.portfolio-filter button:hover {
+    background-color: #fff;
+    box-shadow: 0 .2rem .2rem rgba(68, 68, 68, 1);
+
+}
+
+.portfolio-section .mixitup-control-active {
+    background-color: #fff;
+    box-shadow: 0 .2rem .2rem rgba(68, 68, 68, 1);
+
+}
+
+.portfolio-section .col:nth-child(3) {
+    margin-left: 0;
+
+}
+
+.portfolio-image {
+    width: 80%;
+
+}
+
+
+
+
+/* ----------------------------  BUTTON LOAD MORE  
+
+
+
+.portfolio-section .btn-load-more {
+    background-color: #17c2a4;
+    font-size: 1.5rem;
+    border-bottom: 0.3rem solid #14a58c;
+    
+}
+
+.portfolio-section .btn-load-more:hover {
+    background-color: #14a58c;
+    border-bottom: 0.3rem solid #17c2a4;
+    
+}
+
+
+----------------------------------------------- */
+
+
+
+
+            /*=================================
+               ======= CLIENTS AREA ======= 
+            =================================*/
+
+
+
+
+.testimonial {
+    padding: 8rem 0;
+    background: linear-gradient(rgba(215, 70, 128, 0.9), rgba(215, 70, 128, 0.9)), url(Image/bg6.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 110vh;
+
+}
+
+.testimonial h2::after {
+    border-bottom: .3rem solid #b73c6d;
+
+}
+
+.testimonial p {
+    padding-bottom: 4rem;
+
+}
+
+.testimonial .col:nth-child(3) {
+    margin-left: 0;
+
+}
+
+.testimonial .col:nth-child(1),
+.testimonial .col:nth-child(2) {
+    margin-top: 5rem;
+
+}
+
+.testimonial .col:nth-child(3),
+.testimonial .col:nth-child(4) {
+    margin-top: 5rem;
+
+}
+
+.client-image {
+    width: 15rem;
+    float: left;
+
+}
+
+.client {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+
+}
+
+.client-review {
+    width: 40rem;
+    float: left;
+    padding-top: 1rem;
+
+}
+
+.client-review p {
+    padding-left: 2rem;
+    margin-bottom: .5rem;
+    text-align: justify;
+    font-size: 1.8rem;
+    font-style: italic;
+    color: #fff;
+    height: 8rem;
+
+}
+
+.client-review h3 {
+    padding-left: 2rem;
+    text-align: left;
+    color: #fff;
+    font-size: 1.8rem;
+
+
+}
+
+.client-review .role {
+    padding-left: 2rem;
+    text-align: left;
+    display: block;
+    color: #ffdd99;
+
+}
+
+
+
+            /*=================================
+               ======= CONTACT AREA ======= 
+            =================================*/
+
+
+
+
+.contact-section {
+    padding: 8rem 0;
+    background: linear-gradient(rgba(60, 84, 153, 0.9), rgba(60, 84, 153, 0.9)), url(Image/bg7.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 110vh;
+    text-align: center;
+
+}
+
+.contact-section h2::after {
+    border-bottom: .3rem solid #273a71;
+
+}
+
+.contact-section p {
+    padding-bottom: 6rem;
+
+}
+
+form {
+    width: 70%;
+    margin: 0 auto;
+
+}
+
+.contact-section input[type="text"],
+.contact-section input[type="email"],
+.contact-section textarea {
+    width: 100%;
+    background-color: #273a71;
+    padding: 1.5rem 1rem;
+    border: .1rem solid #273a71;
+    border-radius: .4rem;
+    font-size: 1.4rem;
+    outline: none;
+    color: #fff;
+    transition: .5s;
+
+}
+
+.contact-section input[type="text"]:hover,
+.contact-section input[type="email"]:hover,
+.contact-section textarea:hover {
+    box-shadow: 0px 0px 10px 2px #3075e7;
+
+}
+
+.contact-section form ::placeholder {
+    color: #fff;
+    opacity: .8;
+    padding-left: 1.5rem;
+
+}
+
+.btn-submit {
+    background-color: #30bae7;
+    border: none;
+    border-bottom: .3rem solid #299ec5;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+
+.btn-submit:hover {
+    background-color: #299ec5;
+    border-bottom: .3rem solid #30bae7;
+
+}
+
+
+
+            /*=================================
+               ======= FOOTER AREA ======= 
+            =================================*/
+
+
+
+
+.footer-section {
+    padding: 2rem 0;
+    background-color: #344b8e;
+    text-align: center;
+
+}
+
+.footer-section .footer li {
+    display: inline-block;
+    font-size: 1.8rem;
+    font-weight: 600;
+    padding: 0 2rem;
+
+}
+
+.footer-section .footer li a:link,
+.footer-section .footer li a:visited {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+
+}
+
+.footer-section .footer li a:link:hover,
+.footer-section .footer li a:visited:hover {
+    color: #30bae7;
+
+}

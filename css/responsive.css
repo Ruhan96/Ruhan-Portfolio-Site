@@ -1,0 +1,85 @@
+
+@media only screen and (max-width: 1200px) {
+    
+    header{height: 70vh;}
+    .row{margin: 0 15px;}
+}
+
+
+@media only screen and (max-width: 1024px) {
+    
+    .mobile-menu span{display: block;}
+    .main-nav{display: none;}
+    .skill-area{height: 100%;}
+    .portfolio-section{height: 100%;}
+    html{font-size: 55.5%;}
+    header{height: 45vh;}
+    .services-section{height: 100%;}
+    .team-section{height: 100%;}
+    .client-image{float: none;margin: 0 auto;}
+    .client-review{margin: 0 auto;float: none;}
+    .client-review p,.client-review h3,.client-review .role{text-align: center;}
+    .testimonial{height: 100%;}
+    .testimonial .col:nth-child(1), .testimonial .col:nth-child(2), .testimonial .col:nth-child(3), .testimonial .col:nth-child(4){margin-top: 2rem;}
+    .contact-section{height: 100%;}
+}
+
+@media only screen and (max-width: 980px) {
+    
+    header{height: 55vh;}
+    .span_1_of_4{width: 49.2%;margin-bottom: 35px;}
+    .col{margin-left: 0;}
+    .services-section{height: 100%;}
+    .little-description{padding-bottom: 50px;}
+    .team-member{width: 40%;}
+    .team-section{height: 100%;}
+    svg.radial-progress{width: 35%;}
+    .skill-area{height: 100%;}
+    form{width: 100%;}
+    .contact-section .col:last-child{margin-left: 1%;}
+    .contact-section textarea{height: 50%;}
+    .client-review p,.client-review h3,.client-review .role{padding-left: 0;}
+    .client-review{width: 80%;}
+}
+
+@media only screen and (max-width: 768px) {
+    
+    header{height: 55vh;}
+    .hero-text-box{width: 90%;}
+    .little-description{width:80%;}
+    .team-section{height: 100%;}
+    .skill-area{height: 100%;}
+    .portfolio-section{height: 100%;}
+    .services-p{width: 100%;padding: 0 2rem;}
+    .client-review p,.client-review h3,.client-review .role{font-size: 1.7rem;}
+}
+
+@media only screen and (max-width: 560px) {
+        
+    h1 {font-size: 3rem;}
+    header {height: 50vh;}
+    h2{font-size: 2.8rem;}
+    .little-description{width: 100%;}
+    .services-p{width: 80%;} 
+}
+
+@media only screen and (max-width: 480px) {
+    
+    header{height: 45vh}
+    .logo{height: 4rem;}
+    h1{font-size: 2.3rem;}
+    .span_1_of_4{width: 100%;}
+    .services-section,.team-section,.skill-area,.portfolio-section,.testimonial,.contact-section{height: 100%;}
+    .contact-section .col:last-child{margin-left: 0%;}
+    .footer-section .footer li{font-size: 1.5rem;padding: 0 0.8rem;}  
+}
+
+@media only screen and (max-width: 360px) {
+    
+    headar{height: 55vh;}
+    .logo{height: 3.5rem;}
+    h1{font-size: 2.3rem;}
+    h2{font-size: 2.4rem;}
+    .little-description{font-size: 1.6rem;}
+    .client-review p, .client-review h3, .client-review .role{font-size: 1.5rem;} 
+}
